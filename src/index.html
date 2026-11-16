@@ -40,65 +40,72 @@
 
     <header class="sticky top-0 z-40 border-b border-line bg-canvas/80 backdrop-blur-md">
       <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a
-          href="/"
-          class="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
-          aria-label="denohub 子站导航首页"
-        >
-          <span
-            class="flex size-6 select-none items-center justify-center rounded-md bg-fg text-[13px] font-bold leading-none text-canvas"
-            aria-hidden="true"
-            >d</span
+        <div class="flex items-center gap-2.5">
+          <a
+            href="/"
+            class="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            aria-label="denohub 首页"
           >
-          <span class="text-sm font-semibold tracking-tight">denohub</span>
+            <span
+              class="flex size-6 select-none items-center justify-center rounded-md bg-fg text-[13px] font-bold leading-none text-canvas"
+              aria-hidden="true"
+            >d</span>
+            <span class="text-sm font-semibold tracking-tight">denohub</span>
+          </a>
           <span class="h-4 w-px bg-line" aria-hidden="true"></span>
           <span class="text-sm text-muted">子站导航</span>
-        </a>
+        </div>
 
-        <button
-          id="theme-toggle"
-          type="button"
-          class="flex size-9 items-center justify-center rounded-md border border-line bg-surface text-muted transition-colors hover:border-line-strong hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
-          aria-label="切换到暗色模式"
-          title="切换到暗色模式"
-        >
-          <svg
-            class="size-[18px] dark:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-            focusable="false"
+        <div class="flex items-center gap-1.5">
+          <a
+            href="/about.html"
+            class="rounded-md px-2.5 py-1.5 text-sm text-muted transition-colors hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          >关于</a>
+          <button
+            id="theme-toggle"
+            type="button"
+            class="flex size-9 items-center justify-center rounded-md border border-line bg-surface text-muted transition-colors hover:border-line-strong hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            aria-label="切换到暗色模式"
+            title="切换到暗色模式"
           >
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-          </svg>
-          <svg
-            class="hidden size-[18px] dark:block"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2" />
-            <path d="M12 20v2" />
-            <path d="m4.93 4.93 1.41 1.41" />
-            <path d="m17.66 17.66 1.41 1.41" />
-            <path d="M2 12h2" />
-            <path d="M20 12h2" />
-            <path d="m6.34 17.66-1.41 1.41" />
-            <path d="m19.07 4.93-1.41 1.41" />
-          </svg>
-        </button>
+            <svg
+              class="size-[18px] dark:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+            <svg
+              class="hidden size-[18px] dark:block"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
