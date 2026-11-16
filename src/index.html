@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>denohub — 子站导航</title>
+    <meta
+      name="description"
+      content="denohub 子站导航，集中访问游戏、开发与 AI 方向的全部 denohub 子站。"
+    />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="canonical" href="https://denohub.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://denohub.com/" />
+    <meta property="og:title" content="denohub — 子站导航" />
+    <meta
+      property="og:description"
+      content="集中访问 denohub 生态下的所有站点，覆盖游戏、开发与 AI。"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary" />
+    <script>
+      (() => {
+        let stored = null;
+        try {
+          stored = localStorage.getItem('denohub-theme');
+        } catch {}
+        const dark = stored
+          ? stored === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', dark ? '#000000' : '#fafafa');
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-40 border-b border-line bg-canvas/80 backdrop-blur-md">
+      <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <a
+          href="/"
+          class="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          aria-label="denohub 子站导航首页"
+        >
+          <span
+            class="flex size-6 select-none items-center justify-center rounded-md bg-fg text-[13px] font-bold leading-none text-canvas"
+            aria-hidden="true"
+            >d</span
+          >
+          <span class="text-sm font-semibold tracking-tight">denohub</span>
+          <span class="h-4 w-px bg-line" aria-hidden="true"></span>
+          <span class="text-sm text-muted">子站导航</span>
+        </a>
+
+        <button
+          id="theme-toggle"
+          type="button"
+          class="flex size-9 items-center justify-center rounded-md border border-line bg-surface text-muted transition-colors hover:border-line-strong hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          aria-label="切换到暗色模式"
+          title="切换到暗色模式"
+        >
+          <svg
+            class="size-[18px] dark:hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg
+            class="hidden size-[18px] dark:block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="relative z-10">
+      <section class="mx-auto max-w-6xl px-4 pb-8 pt-12 sm:px-6 sm:pb-10 sm:pt-20">
+        <p
+          class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-subtle"
+        >
+          <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+          Denohub Directory
+        </p>
+        <h1 class="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">denohub 子站导航</h1>
+        <p class="mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-[15px]">
+          集中访问 denohub 生态下的所有站点，覆盖游戏、开发与 AI。
+        </p>
+        <p class="mt-6 flex items-center gap-2 font-mono text-xs text-subtle">
+          <span><span id="total-count">7</span> 个子站</span>
+          <span aria-hidden="true">·</span>
+          <span><span id="category-count">3</span> 个分类</span>
+        </p>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-4 pb-4 sm:px-6" aria-labelledby="sites-heading">
+        <h2 id="sites-heading" class="sr-only">子站列表</h2>
+        <div
+          id="filters"
+          class="flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="按分类筛选子站"
+        ></div>
+        <div id="site-grid" class="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3"></div>
+        <noscript>
+          <p class="mt-6 text-sm text-muted">需要启用 JavaScript 才能查看子站列表。</p>
+        </noscript>
+      </section>
+    </main>
+
+    <footer class="relative z-10 mt-16 border-t border-line">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-1.5 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+      >
+        <p class="text-xs text-subtle">© <span id="year">2026</span> denohub</p>
+        <p class="text-xs text-subtle">由 Rsbuild 与 Tailwind CSS 构建</p>
+      </div>
+    </footer>
+  </body>
+</html>
